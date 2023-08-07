@@ -1,5 +1,5 @@
 import React from 'react'
-import product from '../../sanity_ecommerce/schemas/product'
+// import product from '../../sanity_ecommerce/schemas/product'
 // import { clienc } from '../lib/client';
 import { client } from '../../lib/Client';
 import { Product, FooterBanner, HeroBanner, Footer } from '../components';
@@ -8,7 +8,7 @@ const Home = ({ products, bannerData }) => {
   return (
     <div>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
-      {console.log(bannerData)}
+      {/* {console.log(bannerData)} */}
 
       <div className='products-heading'>
         <h2> Best Selling Product</h2>
@@ -16,9 +16,10 @@ const Home = ({ products, bannerData }) => {
       </div>
 
       <div className='products-container'>
-        {products?.map((product) => <Product key={product._id} product={product}/>)}
+        {products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
-      <FooterBanner footerBanner = {bannerData && bannerData[0]} />
+
+      <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </div>
   )
 }

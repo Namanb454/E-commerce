@@ -33,8 +33,8 @@ export const StateContext = ({ children }) => {
 
             setCartItems([...cartItems, { ...product }]);
         }
-
-        toast.success(`${qty} ${product.name} added to the cart.`);
+        // Notification bar 
+        toast.success(`Add ${qty} ${product.name} to the cart.`);
     }
 
     const onRemove = (product) => {
@@ -44,6 +44,7 @@ export const StateContext = ({ children }) => {
         setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity);
         setTotalQuantities(prevTotalQuantities => prevTotalQuantities - foundProduct.quantity);
         setCartItems(newCartItems);
+        toast.success(`Remove ${qty} ${product.name} from the cart.`);
     }
 
     const toggleCartItemQuanitity = (id, value) => {
