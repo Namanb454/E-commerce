@@ -11,8 +11,9 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">
-          <img className='logo1' src='animation.gif' />
+        <Link href="/" className='text-black'>
+          {/* <img className='logo1' src='animation.gif' /> */}
+          Trendify
         </Link>
       </p>
 
